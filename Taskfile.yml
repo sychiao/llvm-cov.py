@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  setup:
+    desc: Create an isolated environment and install the package
+    cmds:
+      - python3 -m venv .venv
+      - .venv/bin/python -m pip install -e .
+  test:
+    desc: Run parser, pickle and subprocess tests
+    cmds:
+      - .venv/bin/python -m unittest discover -s tests -v
+  example:
+    desc: Parse the small fixture into a typed pickle and inspect it
+    cmds:
+      - .venv/bin/llvm-cov-py parse examples/coverage.json -o data/example.pkl --overwrite --test-name example
+      - .venv/bin/llvm-cov-py inspect data/example.pkl --files

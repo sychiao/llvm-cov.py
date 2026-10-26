@@ -1,0 +1,12 @@
+{
+  "data": [{
+    "files": [{
+      "filename": "example.cpp",
+      "segments": [[1, 1, 3, true, true, false], [3, 1, 0, false, true, false]],
+      "summary": {"lines": {"count": 2, "covered": 2, "percent": 100}}
+    }],
+    "totals": {"lines": {"count": 2, "covered": 2, "percent": 100}}
+  }],
+  "type": "llvm.coverage.json.export",
+  "version": "3.0.1"
+}

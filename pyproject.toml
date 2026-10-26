@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llvm-cov.py"
+version = "0.1.0"
+description = "Incremental LLVM coverage JSON parsing, typed records and streaming pickle archives"
+requires-python = ">=3.11"
+dependencies = ["ijson>=3.3,<4"]
+
+[project.scripts]
+llvm-cov-py = "llvm_cov.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
